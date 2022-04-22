@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
 import 'antd/dist/antd.css'
-import { Input, Button, List } from 'antd';
+
+import { Button, Input, List } from 'antd';
+import React, { Component } from 'react'
+
 import store from './store/index'
 
 class TodoList extends Component {
@@ -12,6 +14,7 @@ class TodoList extends Component {
     this.handleBtnClick = this.handleBtnClick.bind(this)
     this.handleStoreChange = this.handleStoreChange.bind(this)
     store.subscribe(this.handleStoreChange)
+    console.log(store.getState());
   }
 
   render() {
